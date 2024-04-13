@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <style>
+    #navbar {
+  background-color: #333333;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.5s ease rgb(255, 0, 191);
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+#navbar ul li a {
+  color: #e72b2b;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+#navbar:hover {
+  background-color:navy;
+}
+
+#navbar:hover ul li a {
+  color: #cccccc;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+  </style>
+</head>
+<body style="background-image: url(https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg);">
+  <nav id="navbar" style="font-family:Lucida Calligraphy;font-size: large;color: #e72b2b ;">JAANU's CAFE
+    
+    <ul>
+      <li></li>
+      <li><a href="home.html">Home</a>
+      </li>
+      <li><a href="about.html">About</a>
+      
+      </li>
+      <li><a href="services.html">Services</a>
+      
+      </li>
+      <li><a href="contact.html">Contact</a>
+      
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="container" style="margin-top: 5em;">
+    <h1 style="color:whitesmoke;font-family:Lucida Calligraphy;">FEEDBACK FORM!...FOR OUR SERVICES...</h1>
+    <form>
+    <div class="control-group">
+        <input type="text" class="form-control" id="text" placeholder="Your Name" required="required" data-validation-required-message="Please enter your Name"/>
+        <p class="help-block text-danger"></p>
+    </div>
+
+    <div class="control-group" >
+      <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email"/>
+      <p class="help-block text-danger"></p>
+  </div>
+
+  <div class="control-group" >
+    <input type="password" class="form-control" id="password" placeholder="Your password" required="required" data-validation-required-message="Please enter your password"/>
+    <p class="help-block text-danger"></p>
+</div>
+<div class="control-group">
+      <textarea type="text" class="form-control" placeholder="Feedback for Jaanu's Cafe" id="message" required="required" data-validation-required-message="Please enter a message."/>
+      </textarea>
+      <p class="help-block text-danger">
+    </p>
+    </div>
+    <button type="submit" class="btn btn-red">Send Message</button>
+</div>
+</form>
+  <script>
+    const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+  </script>
+</body>
+</html>

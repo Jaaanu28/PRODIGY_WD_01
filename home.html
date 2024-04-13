@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <style>
+    #navbar {
+  background-color: #333333;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.5s ease rgb(255, 0, 191);
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+#navbar ul li a {
+  color: #e72b2b;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+#navbar:hover {
+  background-color:purple;
+}
+
+#navbar:hover ul li a {
+  color: #cccccc;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+  </style>
+</head>
+<body>
+  <nav id="navbar" style="font-family:Lucida Calligraphy;font-size: large;color: #e72b2b ;">JAANU's CAFE
+    
+    <ul>
+      <li></li>
+      <li><a href="home.html">Home</a>
+      </li>
+      <li><a href="about.html">About</a>
+      
+      </li>
+      <li><a href="services.html">Services</a>
+      
+      </li>
+      <li><a href="contact.html">Contact</a>
+      
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container" style="margin-top: 5em;">
+  <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content9434.jpg" alt="Jaanu's CAFE" height="680px" width="1500px" >
+  <div class="bottom-left"><h1 style="background-color:hotpink; font-size: larger; font-family: Rockwell;">Life Begins Well After A CUP OF COFFEE!...</h1></div>
+  <div class="top-left"><h1>WELCOME TO JAANU'S CAFE! &#128519;</h1></div>
+</div>
+  <script>
+    const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+  </script>
+</body>
+</html>
