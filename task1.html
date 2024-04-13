@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaanu's Cafe</title>
+<style>
+  /* CSS for Navbar */
+  #navbar {
+    background-color: #333333;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color 0.5s ease rgb(255, 0, 191);
+  }
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  #navbar ul li a {
+    color: #e72b2b;
+    text-decoration: none;
+    transition: color 0.5s ease;
+  }
+  #navbar:hover {
+    background-color: navy;
+  }
+  #navbar:hover ul li a {
+    color: #cccccc;
+  }
+  /* CSS for Container */
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 5em;
+  }
+  /* CSS for Feedback Form */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .btn-red {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-red:hover {
+    background-color: darkred;
+  }
+</style>
+</head>
+<body style="background-image: url(https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg);">
+
+<!-- Navbar -->
+<nav id="navbar" style="font-family: Lucida Calligraphy; font-size: large; color: #e72b2b;">Jaanu's Cafe
+  <ul>
+    <li></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Content -->
+<div class="container">
+  <h1 style="color: whitesmoke; font-family: Lucida Calligraphy;">Welcome to Jaanu's Cafe!</h1>
+  <p>We offer the finest selection of coffee and pastries. Come and enjoy our cozy atmosphere.</p>
+</div>
+
+<!-- JavaScript for Navbar scroll effect -->
+<script>
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>
+
